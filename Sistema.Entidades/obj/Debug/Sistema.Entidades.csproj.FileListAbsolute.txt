@@ -1,0 +1,6 @@
+C:\Users\Gestion Financiera\source\repos\Sistema\Sistema.Entidades\bin\Debug\Sistema.Entidades.dll
+C:\Users\Gestion Financiera\source\repos\Sistema\Sistema.Entidades\bin\Debug\Sistema.Entidades.pdb
+C:\Users\Gestion Financiera\source\repos\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.csproj.AssemblyReference.cache
+C:\Users\Gestion Financiera\source\repos\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Gestion Financiera\source\repos\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.dll
+C:\Users\Gestion Financiera\source\repos\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.pdb
