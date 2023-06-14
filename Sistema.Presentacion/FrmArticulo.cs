@@ -185,13 +185,14 @@ namespace Sistema.Presentacion
 
         private void BtnInsertar_Click(object sender, EventArgs e)
         {
+            decimal ValorDecimal;
             try
             {
                 string Rpta = "";
                 if (CboCategoria.Text == string.Empty || TxtNombre.Text == string.Empty || TxtPrecioDeVenta.Text == string.Empty
                     || TxtStock.Text == string.Empty)
                 {
-                    this.MensajeError("Falta ingresar algunos datos");
+                    this.MensajeError("Falta ingresar algunos datoss");
                     ErrorIcono.SetError(TxtNombre, "Ingrese un nombre");
                     ErrorIcono.SetError(CboCategoria, "Ingrese una categoría");
                     ErrorIcono.SetError(TxtPrecioDeVenta, "Ingrese un precio de venta");
