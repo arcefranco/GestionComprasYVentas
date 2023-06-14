@@ -20,7 +20,11 @@ namespace Sistema.Negocio
             Sistema.Datos.DCategoria Datos = new Datos.DCategoria();
             return Datos.Buscar(Valor);
         }
-
+        public static DataTable Seleccionar()
+        {
+            Sistema.Datos.DCategoria Datos = new Datos.DCategoria();
+            return Datos.Seleccionar();
+        }
         public static string Insertar(string Nombre, string Descripcion)
         {
             Sistema.Datos.DCategoria Datos = new Datos.DCategoria();

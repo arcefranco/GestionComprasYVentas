@@ -125,5 +125,12 @@ namespace Sistema.Presentacion
         {
 
         }
+
+        private void artículosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmArticulo frm = new FrmArticulo();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

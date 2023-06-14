@@ -47,6 +47,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.BtnActualizar = new System.Windows.Forms.Button();
+            this.ChkSeleccionar = new System.Windows.Forms.CheckBox();
+            this.BtnActivar = new System.Windows.Forms.Button();
+            this.BtnDesactivar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
             this.TabGeneral.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListado)).BeginInit();
@@ -68,7 +72,6 @@
             // 
             this.tabPage1.Controls.Add(this.BtnBuscar);
             this.tabPage1.Controls.Add(this.TxtBuscar);
-            this.tabPage1.Controls.Add(this.LblTotal);
             this.tabPage1.Controls.Add(this.DgvListado);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
@@ -99,7 +102,7 @@
             // LblTotal
             // 
             this.LblTotal.AutoSize = true;
-            this.LblTotal.Location = new System.Drawing.Point(1015, 483);
+            this.LblTotal.Location = new System.Drawing.Point(987, 584);
             this.LblTotal.Name = "LblTotal";
             this.LblTotal.Size = new System.Drawing.Size(38, 16);
             this.LblTotal.TabIndex = 1;
@@ -121,6 +124,7 @@
             this.DgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvListado.Size = new System.Drawing.Size(1081, 394);
             this.DgvListado.TabIndex = 0;
+            this.DgvListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListado_CellContentClick);
             this.DgvListado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListado_CellDoubleClick);
             // 
             // Seleccionar
@@ -240,12 +244,58 @@
             this.BtnActualizar.UseVisualStyleBackColor = true;
             this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
+            // ChkSeleccionar
+            // 
+            this.ChkSeleccionar.AutoSize = true;
+            this.ChkSeleccionar.Location = new System.Drawing.Point(89, 580);
+            this.ChkSeleccionar.Name = "ChkSeleccionar";
+            this.ChkSeleccionar.Size = new System.Drawing.Size(101, 20);
+            this.ChkSeleccionar.TabIndex = 1;
+            this.ChkSeleccionar.Text = "Seleccionar";
+            this.ChkSeleccionar.UseVisualStyleBackColor = true;
+            this.ChkSeleccionar.CheckedChanged += new System.EventHandler(this.ChkSeleccionar_CheckedChanged);
+            // 
+            // BtnActivar
+            // 
+            this.BtnActivar.Location = new System.Drawing.Point(357, 574);
+            this.BtnActivar.Name = "BtnActivar";
+            this.BtnActivar.Size = new System.Drawing.Size(132, 26);
+            this.BtnActivar.TabIndex = 2;
+            this.BtnActivar.Text = "Activar";
+            this.BtnActivar.UseVisualStyleBackColor = true;
+            this.BtnActivar.Click += new System.EventHandler(this.BtnActivar_Click);
+            // 
+            // BtnDesactivar
+            // 
+            this.BtnDesactivar.Location = new System.Drawing.Point(522, 574);
+            this.BtnDesactivar.Name = "BtnDesactivar";
+            this.BtnDesactivar.Size = new System.Drawing.Size(128, 26);
+            this.BtnDesactivar.TabIndex = 3;
+            this.BtnDesactivar.Text = "Desactivar";
+            this.BtnDesactivar.UseVisualStyleBackColor = true;
+            this.BtnDesactivar.Click += new System.EventHandler(this.BtnDesactivar_Click);
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.Location = new System.Drawing.Point(690, 574);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(135, 26);
+            this.BtnEliminar.TabIndex = 4;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1212, 674);
+            this.Controls.Add(this.BtnEliminar);
+            this.Controls.Add(this.BtnDesactivar);
+            this.Controls.Add(this.LblTotal);
+            this.Controls.Add(this.BtnActivar);
+            this.Controls.Add(this.ChkSeleccionar);
             this.Controls.Add(this.TabGeneral);
             this.Name = "FrmCategoria";
             this.Text = "Categorias";
@@ -258,6 +308,7 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -281,5 +332,9 @@
         private System.Windows.Forms.TextBox TxtDescripcion;
         private System.Windows.Forms.ErrorProvider ErrorIcono;
         private System.Windows.Forms.Button BtnActualizar;
+        private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.Button BtnDesactivar;
+        private System.Windows.Forms.Button BtnActivar;
+        private System.Windows.Forms.CheckBox ChkSeleccionar;
     }
 }
