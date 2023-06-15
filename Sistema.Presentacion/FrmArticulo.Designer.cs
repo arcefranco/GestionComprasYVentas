@@ -51,6 +51,10 @@
             this.DgvListado = new System.Windows.Forms.DataGridView();
             this.TabGeneral = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.TxtStock = new System.Windows.Forms.TextBox();
+            this.TxtPrecioVenta = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.PanelCodigo = new System.Windows.Forms.Panel();
             this.BtnGuardarCodigo = new System.Windows.Forms.Button();
             this.BtnGenerar = new System.Windows.Forms.Button();
@@ -62,10 +66,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.CboCategoria = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TxtPrecioDeVenta = new System.Windows.Forms.TextBox();
-            this.TxtStock = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListado)).BeginInit();
@@ -82,6 +82,7 @@
             this.BtnEliminar.TabIndex = 10;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnActivar
             // 
@@ -91,6 +92,7 @@
             this.BtnActivar.TabIndex = 8;
             this.BtnActivar.Text = "Activar";
             this.BtnActivar.UseVisualStyleBackColor = true;
+            this.BtnActivar.Click += new System.EventHandler(this.BtnActivar_Click);
             // 
             // ChkSeleccionar
             // 
@@ -101,6 +103,7 @@
             this.ChkSeleccionar.TabIndex = 6;
             this.ChkSeleccionar.Text = "Seleccionar";
             this.ChkSeleccionar.UseVisualStyleBackColor = true;
+            this.ChkSeleccionar.CheckedChanged += new System.EventHandler(this.ChkSeleccionar_CheckedChanged);
             // 
             // ErrorIcono
             // 
@@ -114,6 +117,7 @@
             this.BtnDesactivar.TabIndex = 9;
             this.BtnDesactivar.Text = "Desactivar";
             this.BtnDesactivar.UseVisualStyleBackColor = true;
+            this.BtnDesactivar.Click += new System.EventHandler(this.BtnDesactivar_Click);
             // 
             // LblTotal
             // 
@@ -132,6 +136,7 @@
             this.BtnActualizar.TabIndex = 8;
             this.BtnActualizar.Text = "Actualizar";
             this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // label3
             // 
@@ -235,7 +240,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1368, 594);
+            this.tabPage1.Size = new System.Drawing.Size(1368, 744);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -256,6 +261,8 @@
             this.DgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvListado.Size = new System.Drawing.Size(1284, 410);
             this.DgvListado.TabIndex = 0;
+            this.DgvListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListado_CellContentClick);
+            this.DgvListado.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListado_CellContentDoubleClick);
             // 
             // TabGeneral
             // 
@@ -270,7 +277,7 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.TxtStock);
-            this.tabPage2.Controls.Add(this.TxtPrecioDeVenta);
+            this.tabPage2.Controls.Add(this.TxtPrecioVenta);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.PanelCodigo);
@@ -301,6 +308,38 @@
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // TxtStock
+            // 
+            this.TxtStock.Location = new System.Drawing.Point(258, 599);
+            this.TxtStock.Name = "TxtStock";
+            this.TxtStock.Size = new System.Drawing.Size(200, 22);
+            this.TxtStock.TabIndex = 23;
+            // 
+            // TxtPrecioVenta
+            // 
+            this.TxtPrecioVenta.Location = new System.Drawing.Point(261, 515);
+            this.TxtPrecioVenta.Name = "TxtPrecioVenta";
+            this.TxtPrecioVenta.Size = new System.Drawing.Size(197, 22);
+            this.TxtPrecioVenta.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(127, 605);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 16);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Stock (*)";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(127, 521);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(119, 16);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Precio de Venta (*)";
             // 
             // PanelCodigo
             // 
@@ -401,38 +440,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Categoría";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(127, 521);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 16);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Precio de Venta (*)";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(127, 605);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 16);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Stock (*)";
-            // 
-            // TxtPrecioDeVenta
-            // 
-            this.TxtPrecioDeVenta.Location = new System.Drawing.Point(261, 515);
-            this.TxtPrecioDeVenta.Name = "TxtPrecioDeVenta";
-            this.TxtPrecioDeVenta.Size = new System.Drawing.Size(197, 22);
-            this.TxtPrecioDeVenta.TabIndex = 22;
-            // 
-            // TxtStock
-            // 
-            this.TxtStock.Location = new System.Drawing.Point(258, 599);
-            this.TxtStock.Name = "TxtStock";
-            this.TxtStock.Size = new System.Drawing.Size(200, 22);
-            this.TxtStock.TabIndex = 23;
-            // 
             // FrmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -496,7 +503,7 @@
         private System.Windows.Forms.Button BtnGuardarCodigo;
         private System.Windows.Forms.Button BtnGenerar;
         private System.Windows.Forms.TextBox TxtStock;
-        private System.Windows.Forms.TextBox TxtPrecioDeVenta;
+        private System.Windows.Forms.TextBox TxtPrecioVenta;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
     }

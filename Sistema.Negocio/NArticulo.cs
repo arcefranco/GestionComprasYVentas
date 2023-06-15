@@ -1,4 +1,5 @@
-﻿using Sistema.Entidades;
+﻿using Sistema.Datos;
+using Sistema.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -45,12 +46,10 @@ namespace Sistema.Negocio
 
         }
 
-        public static string Actualizar(int Id, int IdCategoria, string Codigo,  string NombreAnt, string Nombre,
-            decimal PrecioVenta, int Stock, string Descripcion, string Imagen)
+        public static string Actualizar(int Id, int IdCategoria, string Codigo, string NombreAnt, string Nombre, decimal PrecioVenta, int Stock, string Descripcion, string Imagen)
         {
-            Sistema.Datos.DArticulo Datos = new Datos.DArticulo();
+            DArticulo Datos = new DArticulo();
             Articulo Obj = new Articulo();
-
 
             if (NombreAnt.Equals(Nombre))
             {
@@ -69,7 +68,7 @@ namespace Sistema.Negocio
                 string Existe = Datos.Existe(Nombre);
                 if (Existe.Equals("1"))
                 {
-                    return "El articulo ya existe";
+                    return "El artículo ya existe";
                 }
                 else
                 {
@@ -82,11 +81,8 @@ namespace Sistema.Negocio
                     Obj.Descripcion = Descripcion;
                     Obj.Imagen = Imagen;
                     return Datos.Actualizar(Obj);
-
                 }
             }
-
-
 
         }
 

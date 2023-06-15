@@ -153,6 +153,7 @@ namespace Sistema.Datos
                 SqlCon = Conexion.getInstancia().CrearConexion();
                 SqlCommand Comando = new SqlCommand("articulo_actualizar", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@idcategoria", SqlDbType.Int).Value = Obj.IdCategoria;
                 Comando.Parameters.Add("@idarticulo", SqlDbType.Int).Value = Obj.IdArticulo;
                 Comando.Parameters.Add("@codigo", SqlDbType.Int).Value = Obj.Codigo;
                 Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.Nombre;
