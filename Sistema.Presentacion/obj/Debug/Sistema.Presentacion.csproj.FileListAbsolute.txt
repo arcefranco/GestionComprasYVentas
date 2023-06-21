@@ -48,3 +48,5 @@ C:\Users\Gestion Financiera\source\repos\Sistema\Sistema.Presentacion\bin\Debug\
 C:\Users\Gestion Financiera\source\repos\Sistema\Sistema.Presentacion\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Gestion Financiera\source\repos\Sistema\Sistema.Presentacion\bin\Debug\System.ValueTuple.xml
 C:\Users\Gestion Financiera\source\repos\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.exe.config
+C:\Users\Gestion Financiera\source\repos\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.FrmRol.resources
+C:\Users\Gestion Financiera\source\repos\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.FrmUsuario.resources

@@ -106,14 +106,14 @@
             // cateToolStripMenuItem
             // 
             this.cateToolStripMenuItem.Name = "cateToolStripMenuItem";
-            this.cateToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cateToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.cateToolStripMenuItem.Text = "Cate&gorías";
             this.cateToolStripMenuItem.Click += new System.EventHandler(this.cateToolStripMenuItem_Click);
             // 
             // artículosToolStripMenuItem
             // 
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
-            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.artículosToolStripMenuItem.Text = "&Artículos";
             this.artículosToolStripMenuItem.Click += new System.EventHandler(this.artículosToolStripMenuItem_Click);
             // 
@@ -171,14 +171,16 @@
             // rolesToolStripMenuItem
             // 
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.rolesToolStripMenuItem.Text = "&Roles";
+            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.usuariosToolStripMenuItem.Text = "&Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
