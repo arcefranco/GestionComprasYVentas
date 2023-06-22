@@ -81,6 +81,7 @@
             this.BtnEliminar.TabIndex = 10;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnActivar
             // 
@@ -90,6 +91,7 @@
             this.BtnActivar.TabIndex = 8;
             this.BtnActivar.Text = "Activar";
             this.BtnActivar.UseVisualStyleBackColor = true;
+            this.BtnActivar.Click += new System.EventHandler(this.BtnActivar_Click);
             // 
             // ChkSeleccionar
             // 
@@ -100,6 +102,7 @@
             this.ChkSeleccionar.TabIndex = 6;
             this.ChkSeleccionar.Text = "Seleccionar";
             this.ChkSeleccionar.UseVisualStyleBackColor = true;
+            this.ChkSeleccionar.CheckedChanged += new System.EventHandler(this.ChkSeleccionar_CheckedChanged);
             // 
             // ErrorIcono
             // 
@@ -113,6 +116,7 @@
             this.BtnDesactivar.TabIndex = 9;
             this.BtnDesactivar.Text = "Desactivar";
             this.BtnDesactivar.UseVisualStyleBackColor = true;
+            this.BtnDesactivar.Click += new System.EventHandler(this.BtnDesactivar_Click);
             // 
             // LblTotal
             // 
@@ -125,17 +129,18 @@
             // 
             // BtnActualizar
             // 
-            this.BtnActualizar.Location = new System.Drawing.Point(125, 425);
+            this.BtnActualizar.Location = new System.Drawing.Point(430, 449);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(200, 36);
             this.BtnActualizar.TabIndex = 8;
             this.BtnActualizar.Text = "Actualizar";
             this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(334, 469);
+            this.label3.Location = new System.Drawing.Point(962, 459);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 16);
             this.label3.TabIndex = 7;
@@ -149,6 +154,7 @@
             this.BtnCancelar.TabIndex = 6;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnInsertar
             // 
@@ -247,6 +253,9 @@
             this.DgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvListado.Size = new System.Drawing.Size(1280, 416);
             this.DgvListado.TabIndex = 0;
+            this.DgvListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListado_CellContentClick);
+            this.DgvListado.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListado_CellContentDoubleClick);
+            this.DgvListado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListado_CellDoubleClick);
             // 
             // TabGeneral
             // 
